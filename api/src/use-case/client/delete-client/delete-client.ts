@@ -6,6 +6,6 @@ export class DeleteClient {
         await new FindOneClient().handle({id: id})
         const repository = new DeleteRepository()
         const client = await repository.handleDelete({ id })
-        return {messge: "Cliente deletado com sucesso"}
+        return {message: "Cliente deletado com sucesso"}
     }
 }

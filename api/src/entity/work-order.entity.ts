@@ -11,7 +11,7 @@ export class WorkOrderEntity {
 
     @ManyToOne(() => QuotationEntity, (quotation) => quotation.workOrder, { nullable: false })
     @JoinColumn({ name: 'id_quotation' })
-    quotation: WorkOrderTypeEntity
+    quotation: QuotationEntity
 
     @Column("decimal", { name: 'price', nullable: false, precision: 10, scale: 2 })
     price: number;
